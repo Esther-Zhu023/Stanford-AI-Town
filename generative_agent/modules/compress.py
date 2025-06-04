@@ -4,7 +4,7 @@ import argparse
 from datetime import datetime
 
 from modules.maze import Maze
-from start import personas
+from generative_agent.data.start import personas
 
 file_markdown = "simulation.md"
 file_movement = "movement.json"

@@ -3,8 +3,8 @@ import json
 from datetime import datetime, timedelta
 from flask import Flask, render_template, request
 
-from compress import frames_per_step, file_movement
-from start import personas
+from modules.compress import frames_per_step, file_movement
+from generative_agent.data.start import personas
 
 app = Flask(
     __name__,
