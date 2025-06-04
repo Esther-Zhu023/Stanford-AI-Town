@@ -10,19 +10,6 @@ Generative Agents的原始代码工程化程度较低，难以持续维护或拓
 
 [wounderland](https://github.com/Archermmt/wounderland)项目是原[Generative Agents](https://github.com/joonspk-research/generative_agents)项目的重构版本，结构良好且代码质量远优于原版，因此本项目基于wounderland开发。
 
-更新：
-
-- 2025.06.02：增加对Qwen3和DeepSeek-R1等新模型的支持（处理输出结果中的\<think\>标签）。
-
-主要工作：
-
-- 重写全部提示语，将智能体的“母语”切换为中文，以便对接Qwen或GLM-4等中文模型；
-- 针对中文特点和Qwen2.5/3系列模型的能力，优化中文提示语及智能体之间的对话起止逻辑；
-- 所有提示语模板化，便于后期维护；
-- 修正原版的小问题（例如wounderland原版中智能体在入睡后便不再醒来）；
-- 增加对本地Ollama API的支持，同时将LlamaIndex embedding也接入Ollama，实现完全本地部署，降低实验成本。*Ollama安装及配置可参考[ollama.md](docs/ollama.md)*；
-- 增加“断点恢复”等特性；
-- 回放界面基于原Generative Agents前端代码精简，同时将智能体活动的时间线及对话内容保存至Markdown文档。
 
 回放画面：
 
