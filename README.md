@@ -32,10 +32,10 @@ cd GenerativeAgentsCN
 1. 默认使用[Ollama](https://ollama.com/)加载本地量化模型，并提供OpenAI兼容API。需要先拉取量化模型（参考[ollama.md](docs/ollama.md)），并确保`base_url`和`model`与Ollama中的配置一致。
 2. 如果希望调用其他厂商的API，需要在`api_keys`中填入对应的key，并根据API文档修改`base_url`和`model`。
 
-安装
+1️⃣ 安装
 下载地址：https://ollama.com/  默认选项安装即可。
 
-下载模型
+2️⃣ 下载模型
 在终端窗口输入命令，下载需要的模型。
 
 例如本项目默认使用的大语言模型是qwen3:8b-q4_K_M，嵌入模型是bge-m3，可通过以下命令下载：
@@ -44,12 +44,12 @@ cd GenerativeAgentsCN
 ollama pull bge-m3:latest`
 注：MacOS系统M芯片16G以上内存，或Windows系统30/40系列N卡+12G以上显存，建议使用qwen3-8b模型。24G以上显存可使用更大的量化模型
 
-运行
+3️⃣ 运行
 可直接双击Ollama图标启动服务，也可通过命令行启动：
 
 `ollama serve`
 
-配置
+4️⃣ 配置
 开启API
 
 Windows系统启动服务前需要先配置系统环境变量，否则访问API服务报403错误：
