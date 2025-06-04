@@ -32,6 +32,38 @@ cd GenerativeAgentsCN
 1. 默认使用[Ollama](https://ollama.com/)加载本地量化模型，并提供OpenAI兼容API。需要先拉取量化模型（参考[ollama.md](docs/ollama.md)），并确保`base_url`和`model`与Ollama中的配置一致。
 2. 如果希望调用其他厂商的API，需要在`api_keys`中填入对应的key，并根据API文档修改`base_url`和`model`。
 
+安装
+下载地址：https://ollama.com/  默认选项安装即可。
+
+下载模型
+在终端窗口输入命令，下载需要的模型。
+
+例如本项目默认使用的大语言模型是qwen3:8b-q4_K_M，嵌入模型是bge-m3，可通过以下命令下载：
+
+`ollama pull qwen3:8b-q4_K_M
+ollama pull bge-m3:latest`
+注：MacOS系统M芯片16G以上内存，或Windows系统30/40系列N卡+12G以上显存，建议使用qwen3-8b模型。24G以上显存可使用更大的量化模型
+
+运行
+可直接双击Ollama图标启动服务，也可通过命令行启动：
+
+`ollama serve`
+
+配置
+开启API
+
+Windows系统启动服务前需要先配置系统环境变量，否则访问API服务报403错误：
+
+`OLLAMA_HOST=0.0.0.0
+OLLAMA_ORIGINS=*`
+配置方法： 右键“我的电脑”->属性->高级系统设置->环境变量->系统变量->新建。 在变量名和变量值中分别填入OLLAMA_HOST和0.0.0.0，即完成对OLLAMA_HOST环境变量的配置。其余环境变量同理。
+
+MacOS系统通过以下命令设置环境变量：
+
+`launchctl setenv OLLAMA_HOST "0.0.0.0"
+launchctl setenv OLLAMA_ORIGINS "*"`
+启动后默认监听端口：11434
+
 ### 1.3 安装python依赖
 
 建议先使用anaconda3创建并激活虚拟环境：
@@ -120,13 +152,10 @@ http://127.0.0.1:5000/?name=example&step=0&speed=2&zoom=0.6
 2. 参考现有的maze.json格式，编写代码用于合并tield编辑器导出的maze_meta_info.json、collision_maze.csv、sector_maze.csv等文件，为新地图生成maze.json。
 3. `jiejieje`已为本项目开发了一款地图标注工具，项目地址：https://github.com/jiejieje/tiled_to_maze.json
 
-## 5. 参考资料
+## 5. 参考代码
 
-### 5.1 论文
 
-[Generative Agents: Interactive Simulacra of Human Behavior](https://arxiv.org/abs/2304.03442)
-
-### 5.2 代码
+[GenerativeAgentsCN](https://github.com/x-glacier/GenerativeAgentsCN)
 
 [Generative Agents](https://github.com/joonspk-research/generative_agents)
 
