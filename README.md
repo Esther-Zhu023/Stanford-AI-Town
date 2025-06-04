@@ -42,6 +42,7 @@ cd GenerativeAgentsCN
 
 `ollama pull qwen3:8b-q4_K_M
 ollama pull bge-m3:latest`
+
 注：MacOS系统M芯片16G以上内存，或Windows系统30/40系列N卡+12G以上显存，建议使用qwen3-8b模型。24G以上显存可使用更大的量化模型
 
 3️⃣ 运行
@@ -49,7 +50,9 @@ ollama pull bge-m3:latest`
 
 `ollama serve`
 
+
 4️⃣ 配置
+
 开启API
 
 Windows系统启动服务前需要先配置系统环境变量，否则访问API服务报403错误：
@@ -62,6 +65,7 @@ MacOS系统通过以下命令设置环境变量：
 
 `launchctl setenv OLLAMA_HOST "0.0.0.0"
 launchctl setenv OLLAMA_ORIGINS "*"`
+
 启动后默认监听端口：11434
 
 ### 1.3 安装python依赖
