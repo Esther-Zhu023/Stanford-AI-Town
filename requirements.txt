@@ -6,3 +6,4 @@ llama-index
 llama-index-embeddings-huggingface
 llama-index-embeddings-ollama
 flask
+3.12.11
