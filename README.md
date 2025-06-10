@@ -74,7 +74,7 @@ launchctl setenv OLLAMA_ORIGINS "*"`
 建议先使用anaconda3创建并激活虚拟环境：
 
 ```
-conda create -n generative_agents_cn python=3.11
+conda create -n generative_agents_cn python=3.12.11
 conda activate generative_agents_cn
 ```
 
